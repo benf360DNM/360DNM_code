@@ -1,0 +1,29 @@
+% derivation_energy.tex -- predictive-coding free-energy derivation
+\subsubsection*{Starting point}
+
+We begin with the generative density
+\[
+p(x,z)\;=\;p(x\mid z)\,p(z)
+\]
+where $x$ is sensory input and $z$ the latent scene state.
+
+\subsubsection*{Variational bound}
+
+Introducing the recognition density $q(z)$ and Jensen’s inequality gives
+\[
+\log p(x)\;=\;\log\!\int q(z)\,\frac{p(x,z)}{q(z)}\,\mathrm dz
+\;\ge\;
+\int q(z)\,\log\frac{p(x,z)}{q(z)}\,\mathrm dz\;=\;-\mathcal F .
+\]
+
+\subsubsection*{Gradient}
+
+Using $q(z)=\mathcal N(z;\mu,S)$ one obtains
+\[
+\nabla_{\mu}\mathcal F
+=\Sigma^{-1}(x-\hat x)\,J
+-\!S^{-1}\!(\mu-\mu_0)
+\]
+with $J=\partial\hat x/\partial\mu$ and notation as in
+Tab.~\ref{tab:notation}.
+
