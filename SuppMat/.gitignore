@@ -1,0 +1,11 @@
+# SuppMat/.gitignore
+# ignore all LaTeX scratch files
+*.aux
+*.blg
+*.bbl
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
