@@ -197,4 +197,5 @@ cython_debug/
 *.fdb_latexmk
 *.fls
 *.log
-
+figures/*_power_curves.*
+figures/*_radar_chart.*
